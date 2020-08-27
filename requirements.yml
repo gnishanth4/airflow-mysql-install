@@ -1,0 +1,8 @@
+#Install a role from git hub
+
+ - name: mysql
+   src: https://github.com/gnishanth4/ansible-role-mysql.git
+   version: origin/master
+ - name: airflow
+   src: https://github.com/gnishanth4/airflow-role.git
+   version: origin/master  
