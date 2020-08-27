@@ -1,0 +1,11 @@
+---
+ - name: Install MYSQl and Airflow in ubuntu
+   hosts: localhost
+   connection: local
+   become: yes
+ 
+   roles: 
+       - role: geerlingguy.mysql
+         become: yes 
+       - role: idealista.airflow-role 
+          

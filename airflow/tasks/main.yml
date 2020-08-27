@@ -1,0 +1,11 @@
+---
+# tasks file for airflow
+
+- pip: 
+  name: werkzeug==0.16.0
+
+- src: https://github.com/gnishanth4/airflow-role.git
+  scm: git
+  version: 1.7.2
+  name: airflow    
+          
