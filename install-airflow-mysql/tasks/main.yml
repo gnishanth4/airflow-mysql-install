@@ -1,0 +1,7 @@
+---
+# tasks file for install-airflow-mysql
+#
+- name: install mysql 
+  shell: ansible-galaxy install gnishanth4.mysql
+- name: install airflow
+  shell: ansible-galaxy install gnishanth4.airflow_role  
