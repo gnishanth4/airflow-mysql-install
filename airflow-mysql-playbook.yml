@@ -3,9 +3,16 @@
    hosts: localhost
    connection: local
    become: yes
+   tasks:
+           - name: install python mysql bindings
+             apt: name=python-mysqldb state=installed
+             become: yes
+             become_method: sudo
+           - name: install werkzeug
+             pip: name=werkzeug state=installed version=0.16.0   
  
    roles: 
-       - role: geerlingguy.mysql
+       - role: gnishanth4.mysql
          become: yes 
-       - role: idealista.airflow-role 
+       - role: gnishanth4.airflow_role 
           
