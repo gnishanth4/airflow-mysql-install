@@ -1,6 +1,7 @@
 # airflow-mysql-install
 
 Install Ansible for ubuntu
+--------------------------
 
 sudo apt-get update -y
 
@@ -16,7 +17,14 @@ sudo ansible --version
 
 
 Install these packages
+----------------------
 
 pip install werkzeug==0.16.0
 
 apt install python-mysqldb
+
+
+#Clone the Githubrepo 
+---------------------
+
+git clone 
