@@ -27,4 +27,12 @@ apt install python-mysqldb
 #Clone the Githubrepo 
 ---------------------
 
-git clone 
+git clone https://github.com/gnishanth4/airflow-mysql-install.git
+
+cd airflow-mysql-install
+
+ansible-galaxy install -r requirements.yml
+
+ansible-playbook airflow-mysql-playbook.yml
+
+
