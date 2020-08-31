@@ -48,25 +48,29 @@ Upgrading the MYSQl Database when new version of airflow is deployed
 In your mysql command line do the following:
 
 mysql> SHOW GLOBAL VARIABLES LIKE '%timestamp%';
+
 +---------------------------------+-------+
 | Variable_name                   | Value |
 +---------------------------------+-------+
 | explicit_defaults_for_timestamp | OFF   |
 | log_timestamps                  | UTC   |
 +---------------------------------+-------+
-2 rows in set (0.01 sec)
+
+
 
 mysql> SET GLOBAL explicit_defaults_for_timestamp = 1;
+
 Query OK, 0 rows affected (0.00 sec)
 
 mysql> SHOW GLOBAL VARIABLES LIKE '%timestamp%';
+
 +---------------------------------+-------+
 | Variable_name                   | Value |
 +---------------------------------+-------+
 | explicit_defaults_for_timestamp | ON    |
 | log_timestamps                  | UTC   |
 +---------------------------------+-------+
-2 rows in set (0.00 sec)
+
 
 
 
