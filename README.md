@@ -35,6 +35,22 @@ ansible-galaxy install -r requirements.yml
 
 ansible-playbook airflow-mysql-playbook.yml
 
+Set default python version to python3 in ubuntu
+-----------------------------------------------
+
+A simple safe way would be to use an alias. Place this into ~/.bashrc file: if you have gedit editor use
+
+vi  ~/.bashrc
+
+Go into the bashrc file and then at the top of the bashrc file make the following change.
+
+alias python=python3
+
+After adding the above in the file. run the below command
+
+source ~/.bashrc
+
+
 Install Ansible with python 3.x version
 ----------------------------------------
 
