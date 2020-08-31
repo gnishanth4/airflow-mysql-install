@@ -43,33 +43,19 @@ pip3 install ansible
 Upgrading the MYSQl Database when new version of airflow is deployed
 --------------------------------------------------------------------
 
-19
+login into mysql 
+
+mysql -u root -p
 
 In your mysql command line do the following:
 
 mysql> SHOW GLOBAL VARIABLES LIKE '%timestamp%';
 
-+---------------------------------+-------+
-| Variable_name                   | Value |
-+---------------------------------+-------+
-| explicit_defaults_for_timestamp | OFF   |
-| log_timestamps                  | UTC   |
-+---------------------------------+-------+
-
-
-
 mysql> SET GLOBAL explicit_defaults_for_timestamp = 1;
-
-Query OK, 0 rows affected (0.00 sec)
 
 mysql> SHOW GLOBAL VARIABLES LIKE '%timestamp%';
 
-+---------------------------------+-------+
-| Variable_name                   | Value |
-+---------------------------------+-------+
-| explicit_defaults_for_timestamp | ON    |
-| log_timestamps                  | UTC   |
-+---------------------------------+-------+
+
 
 
 
