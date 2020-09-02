@@ -16,9 +16,11 @@ pip3 install ansible
 Install these packages
 ----------------------
 
-pip install werkzeug==0.16.0
+pip3 install werkzeug==0.16.0
 
 apt install python-mysqldb
+
+pip3 install apache-airflow[s3]
 
 
 #Clone the Githubrepo 
@@ -67,6 +69,39 @@ mysql> SHOW GLOBAL VARIABLES LIKE '%timestamp%';
 mysql> SET GLOBAL explicit_defaults_for_timestamp = 1;
 
 mysql> SHOW GLOBAL VARIABLES LIKE '%timestamp%';
+
+
+Downgrading the MYSQL DB
+------------------------
+mysql -u root -p 
+
+mysql> SELECT * FROM alembic_version;
+
+To solve your problem simply use the command:
+
+DROP TABLE alembic_version;
+
+Starting And Checking the Status of Aiflow 
+----------------------------
+
+sudo systemctl start airflow-webserver.service
+
+sudo systemctl start airflow-scheduler.service
+
+sudo systemctl status airflow-webserver.service
+
+sudo systemctl status airflow-scheduler.service
+
+check the last 10 log entries for a particular unit you can type
+
+sudo journalctl -u your-service.service -n 10
+
+To see the 10 last log entries for both services you can type:
+
+sudo journalctl -u airflow-webserver.service -u airflow-scheduler.service -n 10
+
+
+
 
 
 
