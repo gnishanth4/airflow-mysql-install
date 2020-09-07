@@ -3,12 +3,10 @@
    hosts: localhost
    connection: local
    become: yes
-   tasks:          
-           - name: install python mysql bindings
-             apt: name=python-mysqldb state=latest
-             become: yes
-             become_method: sudo
+
    roles:
+        - role: pre-packages
+        
         - role: mysql
 
         - role: airflow  
