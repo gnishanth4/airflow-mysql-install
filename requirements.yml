@@ -8,6 +8,6 @@
  - name: airflow
    src: https://github.com/gnishanth4/airflow-role.git
    version: origin/master 
- - name: Airflow post configs
+ - name: airflow-post-configs
    src: https://github.com/gnishanth4/airflow-post-configs.git
    version: origin/master
