@@ -3,6 +3,8 @@
    hosts: localhost
    connection: local
    become: yes
+   environment: 
+     AIRFLOW_HOME: /etc/airflow
 
    roles:
         - role: pre-packages
