@@ -15,7 +15,7 @@
         
         - role: airflow-post-configs
         
-        - role: airfloe-logo-change
+        - role: airflow-logo-change
 
  
 
