@@ -11,6 +11,6 @@
  - name: airflow-post-configs
    src: https://github.com/gnishanth4/airflow-post-configs.git
    version: origin/master
-- name: airflow-logo-change
-  src: https://github.com/gnishanth4/airflow-brand-logo-change.git
-  version: origin/master
+ - name: airflow-logo-change
+   src: https://github.com/gnishanth4/airflow-brand-logo-change.git
+   version: origin/master
